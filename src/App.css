@@ -1,38 +1,103 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+h1 {
+  position: absolute;
+  left: 20%;
+  top: 10%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  min-width: 400px;
+  background:  #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 150px
+}
+.container::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 110%;
+  left: -5%;
+  top: -5%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 166px -31px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  z-index: -1;
+}
+.container h2 {
+  font-size: 1.5rem;
+}
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 8px 4px;
+  margin: 8px 0;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  margin: 8px 0;
+  padding: 10px 0;
+  background-color:  #33a0ff;
+  color: #fff;
+  border: 1.5px solid  #333;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-outline {
+  background-color: #333;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover{
+  background: rgb(143, 139, 139);
+}
+
+.center {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  height: 250px;
+}
+@media (max-width: 700px) {
+ h1 {
+  left: 9%;
+  font-size: 1.6rem;
+ }
 }

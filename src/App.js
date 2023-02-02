@@ -53,18 +53,18 @@ let reload = () => {
 
   return (
     <body>
-      <div><h1>Be Healthy! Know Your Body Mass Index (BMI).</h1></div>
+      <div><h1>Be Healthy! Know Your Body Mass Index.</h1></div>
       <div className="app"> 
       <div className="container">
         <h2 className="center">BMI Calculator</h2>
         <form onSubmit={calcBmi}>
           <div>
             <label>Weight (kg)</label>
-            <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+            <input type={'number'} value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
           <div>
             <label>Height (cm)</label>
-            <input value={height} onChange={(e) => setHeight(e.target.value)}/>
+            <input type={'number'} value={height} onChange={(e) => setHeight(e.target.value)}/>
           </div>
           <div>
            <button className="btn" type="submit">Submit</button>

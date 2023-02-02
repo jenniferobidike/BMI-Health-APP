@@ -10,11 +10,13 @@ body{
   background-repeat: no-repeat;
   background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
 }
-h1 {
+h1 {    
   position: absolute;
   left: 20%;
+  right: 20%;
   top: 10%;
-  text-align: center;
+  display: flex;
+  justify-content:center;
 }
 
 .app {
@@ -26,6 +28,7 @@ h1 {
 
 .container {
   min-width: 400px;
+  height: 80%;
   background:  #fff;
   padding: 1rem;
   border-radius: 20px;
@@ -95,9 +98,25 @@ p {
 .img-container img {
   height: 250px;
 }
-@media (max-width: 700px) {
+@media (max-width: 991px) {
  h1 {
-  left: 9%;
   font-size: 1.6rem;
+  left: 15%;
+  right: 10%;
+  display:flex;
+  justify-content: center;
  }
+ .container{
+  min-width: 350px;
+ }
+}
+@media (max-width: 500px) {
+  .container{
+    min-width: 270px;
+  }
+  h1{
+    font-size: 1.3rem;
+    right: 10%;
+    left: 10%;
+  }
 }
